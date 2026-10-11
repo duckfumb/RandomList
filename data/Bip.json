@@ -1,0 +1,9 @@
+{
+  "id": 12345678,
+  "name": "Bip",
+  "author": "Creador",
+  "verifier": "Verificador",
+  "verification": "https://youtu.be/XXXXXXXXXXX",
+  "percentToQualify": 100,
+  "records": []
+}
