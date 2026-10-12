@@ -38,7 +38,7 @@ export default {
 
                         <tr>
                             <td class="rank">
-                                <p v-if="i + 1 <= 10" class="type-label-lg">#{{ i + 1 }}</p>
+                                <p v-if="i + 1 <= 8" class="type-label-lg">#{{ i + 1 }}</p>
                                 <p v-else class="type-label-lg">Legacy</p>
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
