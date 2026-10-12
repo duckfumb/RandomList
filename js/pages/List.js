@@ -23,17 +23,31 @@ export default {
         <main v-else class="page-list">
             <div class="list-container">
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
-                        <td class="rank">
-                            <p v-if="i + 1 <= 10" class="type-label-lg">#{{ i + 1 }}</p>
-                            <p v-else class="type-label-lg">Legacy</p>
-                        </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
-                                <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
-                            </button>
-                        </td>
-                    </tr>
+                    <template v-for="([level, err], i) in list">
+                        <tr v-if="i === 5">
+                            <td colspan="2" style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
+                                <p class="type-label-lg" style="color: #fca5a5; margin: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">--- Extended List ---</p>
+                            </td>
+                        </tr>
+                        
+                        <tr v-if="i === 10">
+                            <td colspan="2" style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
+                                <p class="type-label-lg" style="color: #9ca3af; margin: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">--- Legacy List ---</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="rank">
+                                <p v-if="i + 1 <= 10" class="type-label-lg">#{{ i + 1 }}</p>
+                                <p v-else class="type-label-lg">Legacy</p>
+                            </td>
+                            <td class="level" :class="{ 'active': selected == i, 'error': !level }">
+                                <button @click="selected = i">
+                                    <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </template>
                 </table>
             </div>
             <div class="level-container">
