@@ -98,18 +98,19 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
+                    <h3>Requisitos / requirements</h3>
                     <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
+                       The use of hacks (Noclip, Bot, Speedhack, etc...) is prohibited // Prohibido el uso de Hacks (Noclip, Bot, Speedhack, etc...)
                     </p>
                     <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
+                        Only unedited recordings are allowed // Solo se permiten grabaciones sin editar.
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        Have either source audio or clicks/taps in the video // tiene que incluir el audio de original y clics/golpes en el video.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this //
+                        La grabación debe tener un intento previo y mostrar la animación de muerte completa antes de la finalización, a menos que la finalización sea en el primer intento. Los registros de Everyplay están exentos de esto.
                     </p>
                     <p>
                         The recording must also show the player hit the endwall, or the completion will be invalidated.
