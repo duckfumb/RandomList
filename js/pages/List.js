@@ -24,13 +24,13 @@ export default {
             <div class="list-container">
                 <table class="list" v-if="list">
                     <template v-for="([level, err], i) in list">
-                        <tr v-if="i === 5">
+                        <tr v-if="i === 4">
                             <td colspan="2" style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
                                 <p class="type-label-lg" style="color: #fca5a5; margin: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">--- Extended List ---</p>
                             </td>
                         </tr>
                         
-                        <tr v-if="i === 10">
+                        <tr v-if="i === 8">
                             <td colspan="2" style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
                                 <p class="type-label-lg" style="color: #9ca3af; margin: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">--- Legacy List ---</p>
                             </td>
@@ -70,8 +70,8 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 5"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected +1 <= 10"><strong>100%</strong> or better to qualify</p>
+                    <p v-if="selected + 1 <= 4"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-else-if="selected +1 <= 8"><strong>100%</strong> or better to qualify</p>
                     <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
