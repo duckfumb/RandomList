@@ -6,5 +6,11 @@
   "verifier": "Tafuko",
   "verification": "https://youtu.be/TRpRyMBr6Mo",
   "percentToQualify": 100,
-  "records": []
+  "records": [ {
+            "user": "usrARUOIOS",
+            "link": "https://youtu.be/EyM67Bf2ONI?si=phuLnK1Yqn4QF_le",
+            "percent": 100,
+            "hz": 120
+        }      
+  ]
 }
