@@ -1,0 +1,16 @@
+name: Aviso a Discord
+on:
+  push:
+    branches: [main]
+jobs:
+  avisar:
+    if: contains(github.event.head_commit.message, '[aviso]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensaje
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          MSG: ${{ github.event.head_commit.message }}
+        run: |
+          TEXTO=$(echo "$MSG" | head -n 1 | sed 's/\[aviso\]//g')
+          jq -n --arg content "📢 $TEXTO" '{content: $content}' | curl -sS -H "Content-Type: application/json" -d @- "$WEBHOOK"
