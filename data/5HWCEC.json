@@ -1,24 +1,23 @@
 {
-  "id":  150410101,
+  "id": 150410101,
   "name": "5HWCEC",
   "author": "Tafuko",
   "creators": [],
   "verifier": "Tafuko",
   "verification": "https://youtu.be/TRpRyMBr6Mo",
   "percentToQualify": 100,
-  "records": [ {
-            "user": "kirincomworra",
-            "link": "https://youtu.be/EyM67Bf2ONI?si=phuLnK1Yqn4QF_le",
-            "percent": 100,
-            "hz": 120
-        },
-[ {
-            "user": "MateoxLw",
-            "link": "https://www.youtube.com/shorts/BmguyU0ljZI",
-            "percent": 100,
-            "hz": 240
-     
-}]
-
-      
-
+  "records": [
+    {
+      "user": "kirincomworra",
+      "link": "https://youtu.be/EyM67Bf2ONI?si=phuLnK1Yqn4QF_le",
+      "percent": 100,
+      "hz": 120
+    },
+    {
+      "user": "MateoxLw",
+      "link": "https://www.youtube.com/shorts/BmguyU0ljZI",
+      "percent": 100,
+      "hz": 240
+    }
+  ]
+}
