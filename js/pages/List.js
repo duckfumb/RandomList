@@ -113,16 +113,17 @@ export default {
                         La grabación debe tener un intento previo y mostrar la animación de muerte completa antes de la finalización, a menos que la finalización sea en el primer intento. Los registros de Everyplay están exentos de esto.
                     </p>
                     <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
+                        The recording must also show the player hit the endwall, or the completion will be invalidated // La grabación también debe mostrar que el jugador atravesando la pared final, de lo contrario, la finalización será invalidada.
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        Do not use secret routes or bug routes // No usar rutas bugeadas o secret ways.
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
+                        Do not use easy modes, only a record of the unmodified level qualifies // Solo es valido una run o completion si se juega en la version subida a la pagina.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+                       Este proyecto es pequeño, por ende se pide paciencia y no hostigar// This is a small project, so please be patient and avoid harassment.
+                       Gracias, Thx :)))
                     </p>
                 </div>
             </div>
