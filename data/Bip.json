@@ -6,5 +6,17 @@
   "verifier": "Tafuko",
   "verification": "https://youtu.be/-4q3uBkduwg",
   "percentToQualify": 100,
-  "records": []
+  "records": [{
+      "user": "MateoxLw",
+      "link": "https://www.youtube.com/shorts/R8RJmp7R0xs",
+      "percent": 100,
+      "hz": 480
+    },
+    {
+      "user": "LUcky1515",
+      "link": "https://www.youtube.com/watch?v=qUxyX_GPsxs",
+      "percent": 100,
+      "hz": 240
+    },
+]
 }
