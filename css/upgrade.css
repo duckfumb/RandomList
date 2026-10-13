@@ -20,12 +20,11 @@ header {
     opacity: 0.8;
 }
 
-/* Botones de niveles en la lista: más redondeados y con reacción */
-.list button {
-    border-radius: 12px;
+/* Botones de niveles en la lista */
+.page-list .list .level button {
     transition: transform 0.15s ease, background-color 0.15s ease;
 }
-.list button:hover {
+.page-list .list .level button:hover {
     transform: translateX(4px);
 }
 
@@ -42,4 +41,31 @@ header {
         opacity: 1;
         transform: none;
     }
+}
+
+/* Panel derecho como tarjeta (List Editors y Requisitos) */
+.page-list .meta {
+    padding: 1.5rem;
+    gap: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.dark .page-list .meta,
+.page-list.dark .meta {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos del panel con una línea de tu color principal */
+.page-list .meta h3 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary, #ffa443);
+}
+
+/* Cada editor con un poco más de aire */
+.page-list .meta .editors li {
+    padding: 0.25rem 0;
 }
