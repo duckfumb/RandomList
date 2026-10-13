@@ -1,0 +1,45 @@
+/* Barra superior con degradado y sombra */
+header {
+    background: linear-gradient(135deg, #ffa443 0%, #ff7a2f 100%) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Botón Submit Record y pestañas con movimiento */
+.nav__cta {
+    border-radius: 999px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.nav__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.nav__tab {
+    transition: opacity 0.15s ease;
+}
+.nav__tab:hover {
+    opacity: 0.8;
+}
+
+/* Botones de niveles en la lista: más redondeados y con reacción */
+.list button {
+    border-radius: 12px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.list button:hover {
+    transform: translateX(4px);
+}
+
+/* Las páginas aparecen con una animación suave */
+#app > :not(header) {
+    animation: aparecer 0.4s ease;
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
