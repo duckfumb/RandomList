@@ -43,6 +43,7 @@ export default {
                             </td>
                             <td class="level" :class="{ 'active': selected == i, 'error': !level }">
                                 <button @click="selected = i">
+                                    <img v-if="level && thumb(level)" class="thumb" :src="thumb(level)" alt="" loading="lazy">
                                     <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                                 </button>
                             </td>
@@ -196,5 +197,13 @@ export default {
     methods: {
         embed,
         score,
+        // Miniatura de YouTube a partir del link de verificación
+        thumb(level) {
+            const url = level?.verification || "";
+            const m = url.match(
+                /(?:youtu\.be\/|v=|\/shorts\/|\/embed\/)([A-Za-z0-9_-]{11})/
+            );
+            return m ? `https://img.youtube.com/vi/${m[1]}/mqdefault.jpg` : null;
+        },
     },
 };
