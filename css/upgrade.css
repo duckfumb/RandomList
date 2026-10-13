@@ -68,4 +68,28 @@ header {
 /* Cada editor con un poco más de aire */
 .page-list .meta .editors li {
     padding: 0.25rem 0;
+
+    /* Miniaturas de niveles */
+.page-list .list .level button {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+.page-list .list .level .thumb {
+    width: 6.5rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.page-list .list .level.active .thumb {
+    outline: 2px solid var(--color-on-primary, #fff);
+}
+
+@media (max-width: 800px) {
+    .page-list .list .level .thumb {
+        width: 4.5rem;
+    }
+
 }
