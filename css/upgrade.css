@@ -1,142 +1,5 @@
 /* ==========================================================================
-   ABOUT PAGE OVERRIDES - FORZAR TAMAÑO Y ALINEACIÓN (TAFUKO / STAFF / ABOUT)
-   ========================================================================== */
-
-/* 1. Forzar que los contenedores fluyan hacia abajo en lugar de encimarse (EVITAR EL OVERLAP) */
-main.page-info,
-.page-info {
-  display: block !important;
-  position: relative !important;
-  max-width: 900px !important;
-  margin: 80px auto 40px auto !important; /* Espacio abajo del menú superior para que no se pegue */
-  padding: 20px !important;
-  float: none !important;
-  clear: both !important;
-}
-
-/* Forzar que las tarjetas de información se muestren una debajo de otra (NO ENCIMADAS) */
-main.page-info .info-card,
-.page-info .info-card {
-  display: block !important;
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  margin-bottom: 30px !important; /* Separación clara entre secciones */
-  padding: 25px !important;
-  background-color: rgba(20, 20, 20, 0.8) !important; /* Estilo de fondo oscuro para separar */
-  border-radius: 8px !important;
-  width: auto !important;
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  float: none !important;
-}
-
-/* 2. Forzar que los títulos y párrafos no se encimen */
-.page-info h1 {
-  font-size: 2.5rem !important;
-  margin-bottom: 25px !important;
-  display: block !important;
-  position: relative !important;
-  top: auto !important;
-}
-
-.info-card h2 {
-  font-size: 1.8rem !important;
-  margin-top: 0 !important;
-  margin-bottom: 15px !important;
-  display: block !important;
-  position: relative !important;
-}
-
-.info-card p {
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 15px !important;
-  display: block !important;
-  position: relative !important;
-}
-
-/* 3. Forzar el tamaño normal de las imágenes de los editores (LA CORONA, LA TUERCA, ETC.) */
-.editors, 
-ol.editors {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 20px 0 0 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 15px !important; /* Espacio entre cada miembro del staff */
-}
-
-.editors li,
-ol.editors li {
-  display: flex !important;
-  align-items: center !important; /* Centra el icono verticalmente con el nombre */
-  margin: 0 !important;
-  padding: 0 !important;
-  position: relative !important;
-}
-
-/* Controlar tamaño gigante de la corona/tuerca, etc. */
-.editors li img,
-ol.editors li img {
-  width: 28px !important;
-  height: 28px !important;
-  max-width: 28px !important;
-  max-height: 28px !important;
-  min-width: 28px !important;
-  min-height: 28px !important;
-  object-fit: contain !important;
-  margin-right: 12px !important;
-  display: inline-block !important;
-  float: none !important;
-}
-
-/* Estilo para los nombres del Staff */
-.editors li a,
-.editors li p {
-  margin: 0 !important;
-  font-size: 1.1rem !important;
-  display: inline-block !important;
-  position: relative !important;
-}
-
-/* 4. Botones y enlaces "Join us" */
-.info-links {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 12px !important;
-  margin-top: 15px !important;
-  position: relative !important;
-}
-
-.info-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 8px 16px !important;
-  border-radius: 4px !important;
-  text-decoration: none !important;
-  font-weight: bold !important;
-  position: relative !important;
-
-    .info-links .info-btn {
-  background-color: #ff9d2e !important; /* El color naranja de tu interfaz */
-  color: #ffffff !important;
-  padding: 8px 16px !important;
-  border-radius: 6px !important;
-  text-decoration: none !important;
-  font-family: sans-serif !important;
-  font-weight: 700 !important;
-  transition: opacity 0.2s !important;
-}
-
-.info-links .info-btn:hover {
-  opacity: 0.8 !important;
-
-/* ==========================================================================
-   ABOUT PAGE OVERRIDES - CORRECCIÓN DE ESTRUCTURA SIN ROMPER TEMAS (TAFUKO)
+   ABOUT PAGE OVERRIDES - ESTRUCTURA, BOTONES Y TEMAS (TAFUKO)
    ========================================================================== */
 
 /* 1. Flujo natural de la página (evita que las secciones se amontonen o monten) */
@@ -145,9 +8,11 @@ main.page-info,
   display: block !important;
   position: relative !important;
   max-width: 900px !important;
-  margin: 60px auto 40px auto !important; /* Centrado y espacio arriba/abajo */
+  margin: 60px auto 40px auto !important;
   padding: 20px !important;
   box-shadow: none !important;
+  float: none !important;
+  clear: both !important;
 }
 
 /* Separación ordenada para cada sección */
@@ -158,9 +23,11 @@ main.page-info,
   left: auto !important;
   right: auto !important;
   bottom: auto !important;
-  margin-bottom: 25px !important; /* Margen de separación */
+  margin-bottom: 25px !important;
   padding: 20px !important;
   float: none !important;
+  background-color: var(--background-card, rgba(0, 0, 0, 0.03)) !important;
+  border-radius: 8px !important;
 }
 
 /* Forzar que los textos no se encimen */
@@ -214,13 +81,30 @@ ol.editors li img {
   position: relative !important;
 }
 
-/* 3. Alinear y separar botones (Join us) */
+/* 3. Alinear y dar color a los botones (Join us) */
 .info-links {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 12px !important;
   margin-top: 15px !important;
   position: relative !important;
+}
+
+.info-links .info-btn {
+  background-color: #ff9d2e !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  font-family: sans-serif !important;
+  font-weight: 700 !important;
+  transition: opacity 0.2s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.info-links .info-btn:hover {
+  opacity: 0.8 !important;
 }
 
 /* ==========================================================================
@@ -235,13 +119,12 @@ html.dark,
   background-color: #111111 !important;
 }
 
-/* Fondo transparente o adaptable para las tarjetas si es necesario */
-.info-card {
-  background-color: var(--background-card, rgba(255, 255, 255, 0.05)) !important;
+/* En modo oscuro, las tarjetas tienen un fondo oscuro sutil */
+.dark .info-card {
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Links y texto del staff responsivo al color de la plantilla */
 .editors li a {
   color: var(--text, inherit) !important;
-}
 }
