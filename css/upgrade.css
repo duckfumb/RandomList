@@ -1,259 +1,123 @@
-/* Barra superior con degradado y sombra */
-header {
-    background: linear-gradient(135deg, #ffa443 0%, #ff7a2f 100%) !important;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
-}
+/* ==========================================================================
+   ABOUT PAGE OVERRIDES - FORZAR TAMAÑO Y ALINEACIÓN (TAFUKO / STAFF / ABOUT)
+   ========================================================================== */
 
-/* Botón Submit Record y pestañas con movimiento */
-.nav__cta {
-    border-radius: 999px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.nav__cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-.nav__tab {
-    transition: opacity 0.15s ease;
-}
-.nav__tab:hover {
-    opacity: 0.8;
-}
-
-/* Botones de niveles en la lista */
-.page-list .list .level button {
-    transition: transform 0.15s ease, background-color 0.15s ease;
-}
-.page-list .list .level button:hover {
-    transform: translateX(4px);
-}
-
-/* Las páginas aparecen con una animación suave */
-#app > :not(header) {
-    animation: aparecer 0.4s ease;
-}
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-/* Panel derecho como tarjeta (List Editors y Requisitos) */
-.page-list .meta {
-    padding: 1.5rem;
-    gap: 1.25rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: rgba(0, 0, 0, 0.04);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-.dark .page-list .meta,
-.page-list.dark .meta {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* Títulos del panel con una línea de tu color principal */
-.page-list .meta h3 {
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-primary, #ffa443);
-}
-
-/* Cada editor con un poco más de aire */
-.page-list .meta .editors li {
-    padding: 0.25rem 0;
-}
-/* Miniaturas de niveles (v2) */
-.page-list .list .level button {
-    display: flex !important;
-    align-items: center;
-    gap: 0.9rem;
-    width: 100%;
-    min-width: 0;
-}
-.page-list .list .level button .thumb {
-    width: 6.5rem !important;
-    min-width: 6.5rem;
-    max-width: 6.5rem !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    flex: 0 0 auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-.page-list .list .level button span {
-    min-width: 0;
-}
-.page-list .list .level.active button .thumb {
-    outline: 2px solid var(--color-on-primary, #fff);
-}
-
-@media (max-width: 800px) {
-    .page-list .list .level button .thumb {
-        width: 4.5rem !important;
-        min-width: 4.5rem;
-        max-width: 4.5rem !important;
-    }
-    .page-list .list-container {
-        overflow-x: hidden !important;
-    }
-    /* Video con proporción 16:9 según el ancho real del celular */
-    .page-list .level-container .level iframe.video {
-        width: 100% !important;
-        height: calc((100vw - 2rem) * 9 / 16) !important;
-        aspect-ratio: auto;
-    }
-/* Páginas Standards y About */
+/* 1. Forzar que los contenedores fluyan hacia abajo en lugar de encimarse (EVITAR EL OVERLAP) */
+main.page-info,
 .page-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 52rem;
-    margin: 0 auto;
-    padding: 2rem 1rem 3rem;
-    box-sizing: border-box;
+  display: block !important;
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 80px auto 40px auto !important; /* Espacio abajo del menú superior para que no se pegue */
+  padding: 20px !important;
+  float: none !important;
+  clear: both !important;
 }
+
+/* Forzar que las tarjetas de información se muestren una debajo de otra (NO ENCIMADAS) */
+main.page-info .info-card,
 .page-info .info-card {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: rgba(0, 0, 0, 0.04);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-.dark .page-info .info-card,
-.page-info.dark .info-card {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-.page-info .info-card h2 {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 2px solid var(--color-primary, #ffa443);
-}
-.page-info .es {
-    opacity: 0.75;
-    font-style: italic;
-}
-.page-info .rules {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-    padding-left: 1.25rem;
-    list-style: disc;
-}
-.page-info .rules li p + p {
-    margin-top: 0.25rem;
-}
-.page-info .info-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-.page-info .info-btn {
-    padding: 0.6rem 1.2rem;
-    border-radius: 999px;
-    background: var(--color-primary, #ffa443);
-    color: var(--color-on-primary, #fff);
-    font-weight: 700;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.page-info .info-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-.page-info .editors {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-.page-info .editors li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.page-info .editors li img {
-    height: 1.25rem;
-}
-.page-info .info-note {
-    text-align: center;
-    opacity: 0.8;
-}
-.page-info .info-note a:hover {
-    text-decoration: underline;
-/* Reglas compactas */
-
-/* Selector de idioma de la página Standards */
-.page-info .info-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-.page-info .lang-toggle {
-    display: flex;
-    border-radius: 999px;
-    overflow: hidden;
-    border: 1px solid rgba(128, 128, 128, 0.4);
-}
-.page-info .lang-toggle button {
-    padding: 0.35rem 1rem;
-    border: none;
-    background: transparent;
-    color: inherit;
-    font-weight: 700;
-    cursor: pointer;
-}
-.page-info .lang-toggle button.active {
-    background: var(--color-primary, #ffa443);
-    color: var(--color-on-primary, #fff);
-}
-.page-info .info-card {
-    padding: 1.25rem 1.5rem;
-}
-.page-info .rules.compact {
-    gap: 0.6rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
+  display: block !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin-bottom: 30px !important; /* Separación clara entre secciones */
+  padding: 25px !important;
+  background-color: rgba(20, 20, 20, 0.8) !important; /* Estilo de fondo oscuro para separar */
+  border-radius: 8px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  float: none !important;
 }
 
-/* Panel derecho: reglas rápidas */
-.page-list .meta .quick-rules {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.45;
-}
-.page-list .meta .quick-rules li {
-    padding-left: 0.75rem;
-    border-left: 2px solid var(--color-primary, #ffa443);
-}
-.page-list .meta .quick-rules .es {
-    opacity: 0.7;
-    font-size: 0.85rem;
-}
-.page-list .meta .rules-link {
-    font-weight: 700;
-}
-.page-list .meta .rules-link:hover {
-    text-decoration: underline;
-}
-.page-list .meta .small-note {
-    opacity: 0.7;
+/* 2. Forzar que los títulos y párrafos no se encimen */
+.page-info h1 {
+  font-size: 2.5rem !important;
+  margin-bottom: 25px !important;
+  display: block !important;
+  position: relative !important;
+  top: auto !important;
 }
 
-
+.info-card h2 {
+  font-size: 1.8rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  display: block !important;
+  position: relative !important;
 }
 
+.info-card p {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 15px !important;
+  display: block !important;
+  position: relative !important;
+}
+
+/* 3. Forzar el tamaño normal de las imágenes de los editores (LA CORONA, LA TUERCA, ETC.) */
+.editors, 
+ol.editors {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 20px 0 0 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important; /* Espacio entre cada miembro del staff */
+}
+
+.editors li,
+ol.editors li {
+  display: flex !important;
+  align-items: center !important; /* Centra el icono verticalmente con el nombre */
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+/* Controlar tamaño gigante de la corona/tuerca, etc. */
+.editors li img,
+ol.editors li img {
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  object-fit: contain !important;
+  margin-right: 12px !important;
+  display: inline-block !important;
+  float: none !important;
+}
+
+/* Estilo para los nombres del Staff */
+.editors li a,
+.editors li p {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* 4. Botones y enlaces "Join us" */
+.info-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 15px !important;
+  position: relative !important;
+}
+
+.info-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 8px 16px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  position: relative !important;
+}
