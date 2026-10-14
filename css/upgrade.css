@@ -191,5 +191,69 @@ header {
 }
 .page-info .info-note a:hover {
     text-decoration: underline;
+/* Reglas compactas */
+
+/* Selector de idioma de la página Standards */
+.page-info .info-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.page-info .lang-toggle {
+    display: flex;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+}
+.page-info .lang-toggle button {
+    padding: 0.35rem 1rem;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.page-info .lang-toggle button.active {
+    background: var(--color-primary, #ffa443);
+    color: var(--color-on-primary, #fff);
+}
+.page-info .info-card {
+    padding: 1.25rem 1.5rem;
+}
+.page-info .rules.compact {
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Panel derecho: reglas rápidas */
+.page-list .meta .quick-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+.page-list .meta .quick-rules li {
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--color-primary, #ffa443);
+}
+.page-list .meta .quick-rules .es {
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+.page-list .meta .rules-link {
+    font-weight: 700;
+}
+.page-list .meta .rules-link:hover {
+    text-decoration: underline;
+}
+.page-list .meta .small-note {
+    opacity: 0.7;
+}
+
+
 }
 
