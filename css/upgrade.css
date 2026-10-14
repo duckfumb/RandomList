@@ -1,80 +1,31 @@
 /* ==========================================================================
-   ABOUT & STANDARDS - RECONSTRUCCIÓN VERTICAL ABSOLUTA (EVITA OVERLAP)
+   CÓDIGO DEFINITIVO - ABOUT & STANDARDS (ESTRUCTURA + BOTONES + ICONOS)
    ========================================================================== */
 
-/* 1. Resetear el contenedor principal a un bloque vertical y centrado */
-main.page-info,
-.page-info {
-  display: flex !important;
-  flex-direction: column !important; /* Forza todo hacia abajo */
-  align-items: center !important;
-  width: 100% !important;
-  max-width: 800px !important; /* Controla el ancho para que no se estire de más */
-  margin: 60px auto 40px auto !important; /* Espacio arriba por el menú y centrado */
-  padding: 0 20px !important;
-  box-sizing: border-box !important;
-  float: none !important;
-  clear: both !important;
+/* 1. SEPARACIÓN DE TARJETAS Y TEXTOS (Evita el overlap de manera segura) */
+.info-card {
+  margin-bottom: 30px !important;
   position: relative !important;
-  
-  /* Desactivar cualquier Grid que aplique la plantilla */
-  grid-template-columns: none !important;
-  grid-template-rows: none !important;
-  grid-template-areas: none !important;
 }
 
-/* 2. Forzar que cada tarjeta se comporte como un bloque vertical completo */
-main.page-info > h1,
-main.page-info > .info-card,
-main.page-info > .info-note,
-.page-info > h1,
-.page-info > .info-card,
-.page-info > .info-note {
-  display: block !important;
-  width: 100% !important; /* Ocupa todo el ancho de su fila */
-  max-width: 100% !important;
-  position: relative !important; /* Desactiva posiciones absolutas pegadas al borde */
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: none !important;
-  float: none !important;
-  margin: 0 0 30px 0 !important; /* Genera el espacio vertical entre secciones */
-  padding: 25px !important;
-  background-color: var(--background-card, rgba(255, 255, 255, 0.05)) !important; /* Caja de fondo */
-  border-radius: 8px !important;
-  box-sizing: border-box !important;
-}
-
-/* El título "About" va arriba del todo sin bordes ni fondo */
-main.page-info > h1,
-.page-info > h1 {
-  background: none !important;
-  padding: 0 !important;
-  margin-bottom: 20px !important;
-  font-size: 2.5rem !important;
-}
-
-/* 3. Evitar que textos y subtítulos se monten dentro de las tarjetas */
+/* Fuerza a los textos a ir hacia abajo uno tras otro (desactiva position absolute) */
 .info-card h2,
 .info-card p,
 .info-card ol,
 .info-card .es {
+  position: static !important;
   display: block !important;
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  margin: 0 0 15px 0 !important; /* Separación de párrafos hacia abajo */
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
   width: 100% !important;
-  box-sizing: border-box !important;
 }
 
+/* Quita el margen extra al último párrafo de cada tarjeta */
 .info-card p:last-child {
   margin-bottom: 0 !important;
 }
 
-/* 4. Arreglar definitivamente los iconos de Staff */
+/* 2. ICONOS DEL STAFF (Evita que sean gigantes) */
 ol.editors {
   display: flex !important;
   flex-direction: column !important;
@@ -89,16 +40,12 @@ ol.editors li {
   align-items: center !important;
   margin: 0 !important;
   padding: 0 !important;
-  position: relative !important;
 }
 
 ol.editors li img {
   width: 24px !important;
   height: 24px !important;
-  max-width: 24px !important;
-  max-height: 24px !important;
   min-width: 24px !important;
-  min-height: 24px !important;
   object-fit: contain !important;
   margin-right: 12px !important;
   display: inline-block !important;
@@ -111,17 +58,17 @@ ol.editors li p {
   font-size: 1.1rem !important;
 }
 
-/* 5. Alinear y dar estilo a los botones (Discord, Forms...) */
+/* 3. BOTONES NARANJAS (Discord, Forms, etc.) */
 .info-links {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 12px !important;
   margin-top: 15px !important;
-  position: relative !important;
 }
 
+.info-links a,
 .info-links a.info-btn {
-  background-color: #ff9d2e !important; /* Botón naranja */
+  background-color: #ff9d2e !important;
   color: #ffffff !important;
   padding: 8px 16px !important;
   border-radius: 6px !important;
@@ -132,6 +79,7 @@ ol.editors li p {
   transition: opacity 0.2s !important;
 }
 
+.info-links a:hover,
 .info-links a.info-btn:hover {
   opacity: 0.8 !important;
 }
