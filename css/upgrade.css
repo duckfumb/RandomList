@@ -1,4 +1,24 @@
-/* 1. DOMAR LOS ICONOS GIGANTES DEL STAFF */
+/* 1. ESTRUCTURA GLOBAL (Fuerza a About y Standards a ser una columna vertical centrada) */
+main.page-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+  max-width: 900px !important;
+  margin: 60px auto !important; /* Centra el contenido en la pantalla */
+  padding: 0 20px !important;
+}
+
+/* Evita que los textos floten o se superpongan */
+main.page-info h1, 
+.info-card h2, 
+.info-card p {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 2. ICONOS DEL STAFF (Tamaño controlado) */
 ol.editors {
   display: flex !important;
   flex-direction: column !important;
@@ -20,7 +40,7 @@ ol.editors li img {
   margin-right: 12px !important;
 }
 
-/* 2. ESTILO DE LOS BOTONES NARANJAS (DISCORD, FORMS) */
+/* 3. BOTONES NARANJAS (Discord, Submit Record) */
 .info-links {
   display: flex !important;
   gap: 12px !important;
