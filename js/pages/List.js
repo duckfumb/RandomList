@@ -113,32 +113,28 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Requisitos / requirements</h3>
-                    <p>
-                       The use of hacks (Noclip, Bot, Speedhack, etc...) is prohibited // Prohibido el uso de Hacks (Noclip, Bot, Speedhack, etc...)
-                    </p>
-                    <p>
-                        Only unedited recordings are allowed // Solo se permiten grabaciones sin editar.
-                    </p>
-                    <p>
-                        Have either source audio or clicks/taps in the video // tiene que incluir el audio de original y clics/golpes en el video.
-                    </p>
-                    <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this //
-                        La grabación debe tener un intento previo y mostrar la animación de muerte completa antes de la finalización, a menos que la finalización sea en el primer intento. Los registros de Everyplay están exentos de esto.
-                    </p>
-                    <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated // La grabación también debe mostrar que el jugador atravesando la pared final, de lo contrario, la finalización será invalidada.
-                    </p>
-                    <p>
-                        Do not use secret routes or bug routes // No usar rutas bugeadas o secret ways.
-                    </p>
-                    <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies // Solo es valido una run o completion si se juega en la version subida a la pagina.
-                    </p>
-                    <p>
-                       Este proyecto es pequeño, por ende se pide paciencia y no hostigar// This is a small project, so please be patient and avoid harassment.
-                       Gracias, Thx :)))
+                    <h3>Quick rules / Reglas rápidas</h3>
+                    <ul class="quick-rules">
+                        <li>
+                            <p>Original, possible, not short, and funny (references, music or art).</p>
+                            <p class="es">Originales, posibles, no cortos y chistosos (referencias, música o arte).</p>
+                        </li>
+                        <li>
+                            <p>Verification on YouTube, with game audio and audible clicks.</p>
+                            <p class="es">Verificación en YouTube, con audio del juego y clics audibles.</p>
+                        </li>
+                        <li>
+                            <p>Records: no hacks, unedited, with a previous attempt and the endwall.</p>
+                            <p class="es">Récords: sin hacks ni ediciones, con intento previo y pared final.</p>
+                        </li>
+                        <li>
+                            <p>No secret routes, bug routes or easy modes.</p>
+                            <p class="es">Sin rutas secretas, bugs ni easy modes.</p>
+                        </li>
+                    </ul>
+                    <router-link class="rules-link type-label-lg" to="/standards">Full rules / Reglas completas →</router-link>
+                    <p class="type-label-md small-note">
+                        Small project: please be patient and avoid harassment. / Proyecto pequeño: ten paciencia y no hostigues.
                     </p>
                 </div>
             </div>
