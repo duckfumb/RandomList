@@ -134,5 +134,114 @@ ol.editors li img {
 
 .info-links .info-btn:hover {
   opacity: 0.8 !important;
+
+/* ==========================================================================
+   ABOUT PAGE OVERRIDES - CORRECCIÓN DE ESTRUCTURA SIN ROMPER TEMAS (TAFUKO)
+   ========================================================================== */
+
+/* 1. Flujo natural de la página (evita que las secciones se amontonen o monten) */
+main.page-info,
+.page-info {
+  display: block !important;
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 60px auto 40px auto !important; /* Centrado y espacio arriba/abajo */
+  padding: 20px !important;
+  box-shadow: none !important;
+}
+
+/* Separación ordenada para cada sección */
+.page-info .info-card {
+  display: block !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-bottom: 25px !important; /* Margen de separación */
+  padding: 20px !important;
+  float: none !important;
+}
+
+/* Forzar que los textos no se encimen */
+.page-info h1,
+.info-card h2,
+.info-card p {
+  display: block !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  margin-top: 0 !important;
+}
+
+/* 2. Control de los iconos gigantes del Staff (Corona, tuercas, escudos) */
+.editors, 
+ol.editors {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 15px 0 0 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.editors li,
+ol.editors li {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+}
+
+/* Evitar las imágenes gigantes */
+.editors li img,
+ol.editors li img {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  object-fit: contain !important;
+  margin-right: 12px !important;
+  display: inline-block !important;
+}
+
+/* Enlaces y nombres del Staff alineados */
+.editors li a,
+.editors li p {
+  margin: 0 !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* 3. Alinear y separar botones (Join us) */
+.info-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 15px !important;
+  position: relative !important;
+}
+
+/* ==========================================================================
+   4. ADAPTACIÓN AL TEMA (Fondo y contraste automático)
+   ========================================================================== */
+
+/* Cuando la página tenga activada la clase oscura, usará gris oscuro */
+body.dark, 
+html.dark, 
+#app.dark, 
+.dark {
+  background-color: #111111 !important;
+}
+
+/* Fondo transparente o adaptable para las tarjetas si es necesario */
+.info-card {
+  background-color: var(--background-card, rgba(255, 255, 255, 0.05)) !important;
+}
+
+/* Links y texto del staff responsivo al color de la plantilla */
+.editors li a {
+  color: var(--text, inherit) !important;
 }
 }
