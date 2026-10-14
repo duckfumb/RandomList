@@ -93,4 +93,49 @@ input[type="checkbox"] {
     width: 1.25rem;
     cursor: pointer;
     margin: 0;
+
+    /* 1. Controlar el tamaño de los íconos/avatares gigantes */
+.about-section img,
+.about-section svg,
+.staff-card img,
+.staff-card svg {
+  width: 48px;
+  height: 48px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 2. Organizar la sección en columnas ordenadas (sin textos montados) */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Asegurar que ningún elemento use posicionamiento absoluto por error */
+.about-card,
+.about-section,
+.about-section h1,
+.about-section h2,
+.about-section p {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* 3. Espaciado correcto para los párrafos y botones */
+.about-section p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.join-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
 }
